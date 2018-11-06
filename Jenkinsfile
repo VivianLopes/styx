@@ -25,9 +25,4 @@ make load-test OPENSSL_INCLUDE_DIR=/usr/include
       }
     }
   }
-  post {
-     success {
-        archive "/var/jenkins_home/workspace/Styx_JenkinsFileLocal-GBTGYQH5O22TTLOEISWPOT22JEUXQ3MISEYDJEV2LCRAHSSKYTFQ/logs/"
-     }
-  }
 }
