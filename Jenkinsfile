@@ -24,4 +24,9 @@ make load-test OPENSSL_INCLUDE_DIR=/usr/include
       }
     }
   }
+  post {
+          always {
+              junit '$(CURRENT_DIR)/logs/load-test-$(GIT_BRANCH)-$(shell date "+%Y_%m_%d_%H:%M:%S")'
+          }
+      }
 }
