@@ -27,7 +27,7 @@ make load-test OPENSSL_INCLUDE_DIR=/usr/include
   }
   post {
      success {
-        archive "/var/jenkins_home/workspace/Styx_JenkinsFileLocal-GBTGYQH5O22TTLOEISWPOT22JEUXQ3MISEYDJEV2LCRAHSSKYTFQ/logs/load-test-$(GIT_BRANCH)-$(shell date "+%Y_%m_%d_%H:%M:%S")"
+        archive "/var/jenkins_home/workspace/Styx_JenkinsFileLocal-GBTGYQH5O22TTLOEISWPOT22JEUXQ3MISEYDJEV2LCRAHSSKYTFQ/logs/"
      }
   }
 }
