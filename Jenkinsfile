@@ -21,9 +21,9 @@ done'''
       }
     }
   }
-  post {
-         always {
-             archiveArtifacts artifacts: ‘logs/load-test-jenkinsBranchTest*/*', fingerprint: false
-         }
-     }
+   post {
+          always {
+              archiveArtifacts artifacts: '**load-test-jenkinsBranchTest*/**', fingerprint: false
+          }
+      }
 }
