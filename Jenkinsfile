@@ -23,7 +23,7 @@ done'''
   }
    post {
           always {
-              archiveArtifacts artifacts: '**', fingerprint: false
+              archiveArtifacts artifacts: 'logs/**', fingerprint: false
           }
    }
 }
