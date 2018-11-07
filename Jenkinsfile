@@ -23,7 +23,7 @@ done'''
   }
    post {
           always {
-              archiveArtifacts artifacts: '**load-test-jenkinsBranchTest*/**', fingerprint: false
+              archiveArtifacts artifacts: '**load-test-jenkinsBranchTest**/**', fingerprint: false
           }
-      }
+   }
 }
