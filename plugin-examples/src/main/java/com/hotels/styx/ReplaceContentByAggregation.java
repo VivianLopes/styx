@@ -26,16 +26,17 @@ import java.util.Map;
 import static java.util.Collections.emptyMap;
 import static java.util.Objects.requireNonNull;
 
+/**
+ * You can replace content after aggregating it in memory
+ * For example, if the message content contains a JSON object and you need to modify the object somehow.
+ * You can aggregate the live HTTP message into a full HTTP message. Transform the content into a full message context
+ * and convert the results back to live HTTP message
+ *
+ * This can be used when you need the entire content in order to operate on it.
+ * Please note that this uses more heap space as the full response is transiently stored in the heap.
+ */
 
 public class ReplaceContentByAggregationExample implements Plugin {
-
-
-    /**
-     * You can replace content by aggregation
-     * For example the message content contains a JSON object and you need to modify the object somehow.
-     * You can aggregate the live HTTP message into a full HTTP message. Transform the content into a full message context
-     * and convert the results back to live HTTP message
-     */
 
     @Override
     public Eventual<LiveHttpResponse> intercept(LiveHttpRequest request, Chain chain) {
@@ -56,9 +57,5 @@ public class ReplaceContentByAggregationExample implements Plugin {
     }
 }
 
-/**
- * This can be used when you need to do something with full content and when you need to replace content after looking
- * into it
- * You need to do something with full content. This uses more heap as the full response it transiently stored in heap
- */
+
 
